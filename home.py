@@ -16,7 +16,7 @@ col0 , col1 = st.columns([2,1])
 with col0:
     name = st.selectbox("名称",SETTING['names'])
 with col1:
-    select_options = ['前文'] + list(range(1,ARTICLE[name]['number']+1))
+    select_options = list(range(0,ARTICLE[name]['number']+1))
     article_number = str(st.selectbox("第n条",select_options))
 
 if article_number in ARTICLE[name]:

@@ -5,8 +5,8 @@ import datetime
 with open('articles.json','r', encoding="UTF-8") as article_open:
     ARTICLE = json.load(article_open)
 
-name = "${name}"
-article_number = "${article_number}"
+name = "日本国憲法"
+article_number = "27"
 with open('comment.json', 'r', encoding="UTF-8") as comment_open:
     COMMENT = json.load(comment_open)
 

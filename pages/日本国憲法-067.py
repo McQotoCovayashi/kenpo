@@ -6,7 +6,7 @@ with open('articles.json','r', encoding="UTF-8") as article_open:
     ARTICLE = json.load(article_open)
 
 name = "日本国憲法"
-article_number = "前文"
+article_number = "67"
 with open('comment.json', 'r', encoding="UTF-8") as comment_open:
     COMMENT = json.load(comment_open)
 
@@ -35,7 +35,7 @@ with st.form("コメント",clear_on_submit=True):
         with open('comment.json','w', encoding="UTF-8") as comment_write:
             json.dump(COMMENT, comment_write, indent=4,ensure_ascii=False)
 
-for row in COMMENT[name][article_number]:
+for row in COMMENT[name][article_number]["comment_data"]:
     timestamp = row["timestamp"]
     user = row["user"]
     st.write(f"{timestamp}-{user}")
